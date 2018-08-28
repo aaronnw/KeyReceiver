@@ -11,7 +11,7 @@ def init_gui(server_address):
     w.mainloop()
 
 def main():
-    server_address = ('192.168.0.102', 10000)
+    server_address = ('10.204.56.155', 10000)
     init_gui(server_address)
     # Create a TCP/IP socket
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -22,7 +22,6 @@ def main():
 
     # Listen for incoming connections
     sock.listen(1)
-
 
 
     while True:
@@ -47,6 +46,7 @@ def main():
         finally:
             # Clean up the connection
             connection.close()
+
 
 if __name__ == "__main__":
     main()
